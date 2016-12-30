@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASU Tech Studio Liability Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the ASU Tech Studio!</h2>
+      <br>
+      {% if username %}
+        <p>Not {{ username }}? Click <a href="/">here</a> to go login again.</p>
+      {% endif %}
+      <div style="height:600px;width:1000px;border:10px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+		To agree to this Terms of Service Agreement:
+
+		·        By responding with “I agree”, you agree to this Terms of Service Agreement and understand that you are legally bound by such agreement.
+		Liability Form
+
+		Arizona State University offers limited technical assistance for current ASU students and employees with problems with certain electronic devices such as laptops. Students and employees seeking such service must review and electronically sign the following “Terms of Service Agreement” by selecting the box next to “I agree to this Terms of Service Agreement” and clicking on the “Submit” button.
+
+		TERMS OF SERVICE AGREEMENT
+
+		In consideration for the service provided to me by the Arizona State University, University Technology Office (“UTO”), I understand and agree to the following terms and conditions:
+
+		1. I represent that I have valid software licenses for my operating system and all applications on my electronic device. I will supply details of the relevant license keys if asked for them.
+
+		2. I am solely responsible for protecting and backing-up the data, software, information and all other files that are on my electronic device prior to bringing it in for service. I am solely responsible for protecting any sensitive information that may be held on my electronic device that I do not wish a third-party to access.
+
+		3. I agree to follow the reasonable instructions provided to me regarding the service provided.
+
+		4. LIMITATION OF LIABILITY AND RELEASE: I understand and agree that the Arizona Board of Regents, Arizona State University, the State of Arizona and/or their employees, officers and agents will not be liable to me or any other person for any damages, including without limitation, any direct, indirect, incidental, special or consequential damages, expenses, costs, profits, lost savings or earnings, lost or corrupted data or other liability arising out of or related to the services provided by UTO. I agree to release and hold harmless the Arizona Board of Regents, Arizona State Employees, the State of Arizona and their employees, officers, and agents from and against any liability, loss, or damage, including without limitation, any direct, indirect, incidental, special or consequential damages, expenses, costs, profits, lost savings or earnings, or any other liability arising out of or related to the services provided by UTO. This includes, but is not limited to, data loss or lack of function in any component or element of my electronic device and/or peripherals as a result of the services provided by UTO.
+
+		5. NOTICE OF NO WARRANTY: THE SERVICES AND/OR PARTS AND/OR SOFTWARE PROVIDED BY UTO ARE FURNISHED ON AN “AS-IS” BASIS. UTO MAKES NO WARRANTIES OR GUARANTEES OF ANY KIND, EITHER EXPRESS OR IMPLIED, AS TO ANY MATTER, INCLUDING, BUT NOT LIMITED TO, WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY.
+
+		6. I certify that I’m at least 18 years of age, or that the person agreeing to the Terms of Service Agreement is the legal parent or guardian of the ASU student or employee.
+	  </div>
+      <form action="" method="post">
+        <input class="btn btn-default" type="submit" name="continue"
+         value="Continue" id="continue">
+        <script>document.getElementById('continue').disabled = true</script>
+        <label><input type="checkbox" onchange="document.getElementById('continue').disabled = !this.checked;" />       I agree to the terms and conditions</label>
+      </form>
+    </div>
+  </body>
+</html>
